@@ -7,6 +7,8 @@ if [ ${EUID} != 0 ]; then
     exit $?
 fi
 
+yum install -y unzip
+
 AWS_CLI_TEMP_DIR=/tmp/aws-cli
 AWS_CLI_INSTALL_DIR=/opt/aws-cli
 AWS_CLI_ARCHIVE_URL=https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
