@@ -55,6 +55,5 @@ build:
 	$(call _LOAD_AWSRC); \
 	$(call _SET_PACKER_VAR_FILE_ARGS); \
 	$(call _SET_PACKER_ENV_FILE_ARGS); \
-	PACKER_BUILD_ARGS=("$${PACKER_VAR_FILE_ARGS[@]}" "$${PACKER_ENV_ARGS[@]}"); \
-	packer init; \
+	PACKER_BUILD_ARGS=("$${PACKER_VAR_FILE_ARGS[@]}" "$${PACKER_ENV_ARGS[@]}" "$(PACKER_CONFIGURATION_FILE)"); \
 	packer build "$${PACKER_BUILD_ARGS[@]}"
